@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNetCore.Http
+@model Assignment2.Models.BlogPost
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Edit Blog Post";
+}
+
+<div class="container">
+    <form asp-controller="Home" asp-action="EditBlogPost" method="post" class="col s12">
+        <input type="hidden" value="@Model.BlogPostId" name="BlogPostId" />
+        <div class="row">
+            <div class="input-field col s6">
+                <input asp-for="Title" type="text" />
+            </div>
+            <div class="input-field col s12">
+                <textarea asp-for="Content" type="text" data-length="2000" class="materialize-textarea"></textarea>
+                <button class="btn waves-effect wwaves-light" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

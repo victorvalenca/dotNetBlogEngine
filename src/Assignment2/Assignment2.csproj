@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\materialize\css\materialize.css" />
+    <Content Include="wwwroot\materialize\css\materialize.min.css" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Light.eot" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Light.woff" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="wwwroot\materialize\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="wwwroot\materialize\js\materialize.js" />
+    <Content Include="wwwroot\materialize\js\materialize.min.js" />
+    <Content Include="wwwroot\materialize\LICENSE" />
+    <Content Include="wwwroot\materialize\README.md" />
+    <Content Include="wwwroot\StyleSheet.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="1.1.2" />
+  </ItemGroup>
+
+</Project>

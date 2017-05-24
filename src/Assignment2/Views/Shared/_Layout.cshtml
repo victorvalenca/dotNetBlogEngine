@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/materialize/css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/StyleSheet.css" />
+    <script src="~/materialize/js/materialize.min.js"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <!-- Add navbar here-->
+    <main>
+        <nav>
+            <div class="nav-wrapper">
+                <a class="brand-logo left">@Html.ActionLink("Blogger", "Index", "Home")</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    @if (Context.Session.GetString("UserId") != null)
+            {
+                        <li><a>@Context.Session.GetString("UserName")</a></li>
+                        <li><a>@Html.ActionLink("Create Blog Post", "AddBlogPost", "Home")</a></li>
+                        <li><a>@Html.ActionLink("Logout", "Logout", "Home")</a></li>
+                    }
+                    else
+                    {
+                        <li><a>@Html.ActionLink("Log In", "Login", "Home")</a></li>
+                        <li><a>@Html.ActionLink("Register", "Register", "Home")</a></li>
+                    }
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 BloggerEngine Victor Fernandes
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

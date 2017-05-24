@@ -1,0 +1,55 @@
+﻿@model Assignment2.ViewModels.BlogPostViewModel
+@using Microsoft.AspNetCore.Http;
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = Model.blogPost.Title;
+}
+        <div class="row centered">
+            <div class="card white darken-1">
+                <div class="card-content blue-grey-text">
+                    <span class="card-title">
+                        <b>@Model.blogPost.Title</b><br />
+                            Posted on: @Model.blogPost.Posted<br />
+                            By: @Model.user.FirstName @Model.user.LastName
+                    </span>
+                    <p>@Model.blogPost.Content</p>
+                </div>
+            </div>
+        </div>
+
+    @if (Model.comments.Count() > 0)
+    {
+        <h5 class="card-title">Comments</h5>
+        @foreach (var c in Model.comments)
+        {
+            <div class="row centered">
+                <div class="col s12">
+                    <div class="card white darken-1 hoverable">
+                        <div class="card-content grey-text">
+                            <span class="card-title">By: @c.authorName</span>
+                            <p>@c.comment.Content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    }
+    else
+    {
+        <p>No comments here. Add one please?</p>
+    }
+<div class="divider"></div>
+    @if (Context.Session.GetString("UserId") != null)
+    {
+            <div class="row">
+                <h5>Add a comment</h5>
+                <form asp-controller="Home" asp-action="DisplayFullBlogPost" method="post">
+                    <input type="hidden" name="BlogPostId" value="@Model.blogPost.BlogPostId" />
+                    <textarea type="text" name="Content" data-length="2000" class="materialize-textarea"></textarea>
+                    <button class="btn waves-effect waves-light" type="submit">Submit</button>
+                </form>
+            </div>
+    }

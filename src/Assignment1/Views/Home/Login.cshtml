@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Assignment1.Models.User>
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Blogger Login";
+}
+<div class="container">
+    <form asp-controller="Home" asp-action="AuthenticateUser" method="post" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" name="EmailAddress" placeholder="Email Address" required /><br />
+            </div>
+            <div class="input-field col s6">
+                <input type="password" name="Password" placeholder="Password" required /><br />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-large waves-light">Log In</button>
+    </form>
+</div>
